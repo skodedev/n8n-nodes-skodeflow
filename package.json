@@ -1,0 +1,60 @@
+{
+  "name": "n8n-nodes-skodeflow",
+  "version": "0.1.0",
+  "description": "n8n community node for Skode Flow \u2014 send WhatsApp, Instagram and Facebook messages, manage contacts, and trigger on inbox events.",
+  "keywords": [
+    "n8n-community-node-package",
+    "skode",
+    "flow",
+    "whatsapp",
+    "instagram",
+    "messaging",
+    "omnichannel"
+  ],
+  "license": "MIT",
+  "homepage": "https://skode.ai",
+  "author": {
+    "name": "Skode Technologies Pvt Ltd",
+    "email": "info@skode.ai"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skodedev/n8n-nodes-skodeflow.git"
+  },
+  "engines": {
+    "node": ">=20.15"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "n8n-node build",
+    "dev": "n8n-node dev",
+    "format": "prettier nodes credentials --write",
+    "lint": "n8n-node lint",
+    "lintfix": "n8n-node lint --fix",
+    "prepublishOnly": "npm run build && npm run lint"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/SkodeFlowOAuth2Api.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/SkodeFlow/SkodeFlow.node.js",
+      "dist/nodes/SkodeFlow/SkodeFlowTrigger.node.js"
+    ],
+    "strict": true
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "devDependencies": {
+    "n8n-workflow": "*",
+    "prettier": "^3.3.0",
+    "rimraf": "^6.0.0",
+    "typescript": "^5.5.0",
+    "@n8n/node-cli": "^0.47.2"
+  }
+}
