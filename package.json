@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-skodeflow",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "n8n community node for SkedX Flow — send WhatsApp, Instagram and Facebook messages, manage contacts, and trigger on inbox events.",
   "keywords": [
     "n8n-community-node-package",
