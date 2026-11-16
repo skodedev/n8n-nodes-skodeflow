@@ -8,7 +8,7 @@ import type {
 import { NodeConnectionTypes } from 'n8n-workflow';
 
 /**
- * Skode Flow Trigger — starts a workflow when something happens in the inbox.
+ * SkedX Flow Trigger — starts a workflow when something happens in the inbox.
  *
  * Registers n8n's webhook URL with Flow on activate and removes it on
  * deactivate, so there is no polling:
@@ -21,7 +21,7 @@ import { NodeConnectionTypes } from 'n8n-workflow';
  */
 export class SkodeFlowTrigger implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Skode Flow Trigger',
+		displayName: 'SkedX Flow Trigger',
 		name: 'skodeFlowTrigger',
 		icon: {
 			light: 'file:skodeflow.light.svg',
@@ -30,9 +30,9 @@ export class SkodeFlowTrigger implements INodeType {
 		group: ['trigger'],
 		version: 1,
 		subtitle: '={{$parameter["event"]}}',
-		description: 'Starts a workflow on a Skode Flow inbox event',
+		description: 'Starts a workflow on a SkedX Flow inbox event',
 		defaults: {
-			name: 'Skode Flow Trigger',
+			name: 'SkedX Flow Trigger',
 		},
 		inputs: [],
 		outputs: [NodeConnectionTypes.Main],
@@ -144,7 +144,7 @@ export class SkodeFlowTrigger implements INodeType {
 					// visible rather than silently leaving a live subscription
 					// posting to a dead n8n URL.
 					this.logger.warn(
-						`Skode Flow Trigger: could not remove webhook subscription ${webhookData.subscriptionId}: ${
+						`SkedX Flow Trigger: could not remove webhook subscription ${webhookData.subscriptionId}: ${
 							(error as Error)?.message ?? error
 						}`,
 					);

@@ -1,10 +1,11 @@
 {
   "name": "n8n-nodes-skodeflow",
   "version": "0.1.1",
-  "description": "n8n community node for Skode Flow — send WhatsApp, Instagram and Facebook messages, manage contacts, and trigger on inbox events.",
+  "description": "n8n community node for SkedX Flow — send WhatsApp, Instagram and Facebook messages, manage contacts, and trigger on inbox events.",
   "keywords": [
     "n8n-community-node-package",
     "skode",
+    "skedx",
     "flow",
     "whatsapp",
     "instagram",
@@ -12,10 +13,10 @@
     "omnichannel"
   ],
   "license": "MIT",
-  "homepage": "https://skode.ai",
+  "homepage": "https://skedx.io",
   "author": {
-    "name": "Skode Technologies Pvt Ltd",
-    "email": "info@skode.ai"
+    "name": "SkedX",
+    "email": "info@skedx.io"
   },
   "repository": {
     "type": "git",

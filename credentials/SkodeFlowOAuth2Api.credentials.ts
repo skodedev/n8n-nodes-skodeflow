@@ -1,13 +1,13 @@
 import type { ICredentialType, INodeProperties } from 'n8n-workflow';
 
 /**
- * OAuth2 against Skode's central identity provider (auth.skode.ai) — the same
- * server the Skode Flow Zapier integration authenticates with.
+ * OAuth2 against SkedX's central identity provider (auth.skode.ai) — the same
+ * server the SkedX Flow Zapier integration authenticates with.
  *
  *   authorize: https://auth.skode.ai/o/authorize/
  *   token:     https://auth.skode.ai/o/token/
  *
- * Two deliberate differences from the Skode CRM node's credential:
+ * Two deliberate differences from the SkedX CRM node's credential:
  *
  * 1. The OAuth host is FIXED, not derived from the API base URL. Flow's
  *    identity lives at auth.skode.ai while its API lives at
@@ -35,9 +35,9 @@ export class SkodeFlowOAuth2Api implements ICredentialType {
 		dark: 'file:../nodes/SkodeFlow/skodeflow.dark.svg',
 	} as const;
 
-	displayName = 'Skode Flow OAuth2 API';
+	displayName = 'SkedX Flow OAuth2 API';
 
-	documentationUrl = 'https://skode.ai';
+	documentationUrl = 'https://skedx.io';
 
 	properties: INodeProperties[] = [
 		{
@@ -47,7 +47,7 @@ export class SkodeFlowOAuth2Api implements ICredentialType {
 			default: 'https://flowserver.skode.ai',
 			required: true,
 			description:
-				'Your Skode Flow API origin, no trailing slash. Sign-in happens at auth.skode.ai regardless of this value.',
+				'Your SkedX Flow API origin, no trailing slash. Sign-in happens at auth.skode.ai regardless of this value.',
 		},
 		{
 			displayName: 'Identity Provider URL',
@@ -56,7 +56,7 @@ export class SkodeFlowOAuth2Api implements ICredentialType {
 			default: 'https://auth.skode.ai',
 			required: true,
 			description:
-				'Where you sign in. Change this only for a self-hosted Skode identity server.',
+				'Where you sign in. Change this only for a self-hosted SkedX identity server.',
 		},
 		{
 			// PKCE, not plain authorizationCode: auth.skode.ai rejects a code

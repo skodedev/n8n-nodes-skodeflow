@@ -2,7 +2,7 @@ import type { INodeType, INodeTypeDescription } from 'n8n-workflow';
 import { NodeConnectionTypes } from 'n8n-workflow';
 
 /**
- * Skode Flow — send WhatsApp/Instagram/Facebook messages and manage contacts.
+ * SkedX Flow — send WhatsApp/Instagram/Facebook messages and manage contacts.
  *
  * Talks to the Partner Integration API (/api/partner/v1/…), NOT the Zapier
  * surface. That surface exists so partner traffic has its own rate limits and
@@ -18,7 +18,7 @@ import { NodeConnectionTypes } from 'n8n-workflow';
  */
 export class SkodeFlow implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Skode Flow',
+		displayName: 'SkedX Flow',
 		name: 'skodeFlow',
 		icon: {
 			light: 'file:skodeflow.light.svg',
@@ -27,10 +27,10 @@ export class SkodeFlow implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-		description: 'Send messages and manage contacts in Skode Flow',
+		description: 'Send messages and manage contacts in SkedX Flow',
 		usableAsTool: true,
 		defaults: {
-			name: 'Skode Flow',
+			name: 'SkedX Flow',
 		},
 		inputs: [NodeConnectionTypes.Main],
 		outputs: [NodeConnectionTypes.Main],

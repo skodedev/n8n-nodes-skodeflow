@@ -1,6 +1,6 @@
 # n8n-nodes-skodeflow
 
-An [n8n](https://n8n.io) community node for **[Skode Flow](https://skode.ai)**. Send WhatsApp,
+An [n8n](https://n8n.io) community node for **[SkedX Flow](https://skedx.io)**. Send WhatsApp,
 Instagram and Facebook messages, manage contacts, and start workflows on inbox events.
 
 [Installation](#installation) · [Credentials](#credentials) · [Operations](#operations) ·
@@ -13,16 +13,16 @@ guide. In n8n: **Settings → Community Nodes → Install**, enter `n8n-nodes-sk
 
 ## Credentials
 
-This node signs in through **Skode's central identity provider** (`auth.skode.ai`) — the same
-account you use for Skode Flow, CRM and Forms. There is no API key to copy.
+This node signs in through **SkedX's central identity provider** (`auth.skode.ai`) — the same
+account you use for SkedX Flow, CRM and Forms. There is no API key to copy.
 
-**One-time, Skode admin:** register an OAuth application for n8n and note the **client ID** and
+**One-time, SkedX admin:** register an OAuth application for n8n and note the **client ID** and
 **client secret**. Add n8n's redirect URL to the application's allowed redirect URIs:
 
 - n8n Cloud: `https://oauth.n8n.cloud/oauth2/callback`
 - self-hosted: `https://<your-n8n-host>/rest/oauth2-credential/callback`
 
-**In n8n**, create a *Skode Flow OAuth2 API* credential:
+**In n8n**, create a *SkedX Flow OAuth2 API* credential:
 
 | Field | Value |
 | --- | --- |
@@ -34,7 +34,7 @@ account you use for Skode Flow, CRM and Forms. There is no API key to copy.
 Authorize (`/o/authorize/`) and token (`/o/token/`) URLs are derived from the identity provider
 URL. Click **Connect** and approve.
 
-> **Why two URLs?** Unlike the Skode CRM node, Flow's identity and its API live on different
+> **Why two URLs?** Unlike the SkedX CRM node, Flow's identity and its API live on different
 > hosts: you sign in at `auth.skode.ai` and call `flowserver.skode.ai`. The grant uses **PKCE**,
 > which `auth.skode.ai` requires — a plain authorization-code grant is rejected at the token step,
 > *after* you have already approved, which looks like an unexplained failure at the end.
@@ -62,7 +62,7 @@ attribution. Your n8n traffic is reported as n8n, not as Zapier.
 
 ## Trigger
 
-**Skode Flow Trigger** starts a workflow on an inbox event: message received, conversation
+**SkedX Flow Trigger** starts a workflow on an inbox event: message received, conversation
 created, conversation reopened, or SLA breached.
 
 It registers n8n's webhook URL with Flow (`POST /api/partner/v1/hooks/`) when the workflow is
